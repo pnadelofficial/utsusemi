@@ -40,10 +40,11 @@ def word_search(search, raw_title, spacy_doc):
                 (token.head.text, token.head.pos_)
                 )
             st.write(spacy_doc.text)
+            st.write('[ENGLISH HERE]')
             st.markdown('<hr>',unsafe_allow_html=True)
 
 # interface
-search = st.text_input('Search term', '空蝉')
+search = '空蝉'
 
 if option == '万葉集 (Manyoshū)':
     bytes_file = open('serialized_data/manyoshu_spacy_output','rb').read()

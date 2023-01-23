@@ -69,10 +69,10 @@ def get_deps(nlp, text):
     words = []
     for token in doc:
         if token.text == 'うつせみ':
-            annotated_text(
-                (token.text, token.pos_), 
-                (token.head.text, token.head.pos_)
-            )
+            # annotated_text(
+            #     (token.text, token.pos_), 
+            #     (token.head.text, token.head.pos_)
+            # )
             words.append(token.text)
             c = [child for child in token.children][0]
             words.append(c.text)
